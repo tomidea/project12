@@ -33,3 +33,8 @@ img
           
    img
    
+ 5. Run ansible-playbook command against the dev environment
+Since you need to apply some tasks to your dev servers and wireshark is already installed – you can go ahead and create another playbook under static-assignments and name it common-del.yml. In this playbook, configure deletion of wireshark utility.
+img
+
+
