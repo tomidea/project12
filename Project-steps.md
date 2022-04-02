@@ -125,3 +125,19 @@ So, we should have this in site.yml
 
         - hosts: uat-webservers
         - import_playbook: ../static-assignments/uat-webservers.yml
+    
+    
+    #### Step 5 – Commit & Test
+    Commit your changes, create a Pull Request and merge them to master branch, make sure webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to your Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory.
+
+Now run the playbook against your uat inventory and see what happens:
+    
+        sudo ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yaml
+ img
+    
+    Check both of UAT Web servers configured and try to reach them from your browser:
+    http://54.211.230.35/index.php
+    img
+    http://3.81.208.64/index.php
+    img
+    
